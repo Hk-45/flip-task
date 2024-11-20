@@ -27,7 +27,7 @@ class LaptopSpider(scrapy.Spider):
         for laptop in laptopContainer:
             lpItem = ItemLoader(item=FlipkartItem(), selector=laptop)
             lpItem.add_css('rating', 'div.XQDdHH::text')
-            lpItem.add_css('info','ul.G4BRas  > li::text')
+            lpItem.add_css('info','ul.G4BRas > li::text')
             lpItem.add_css('price','div.Nx9bqj._4b5DiR::text')
             lpItem.add_css("originalPrice", "div.yRaY8j.ZYYwLA::text")
             lpItem.add_css("discount", "div.UkUFwK::text")
